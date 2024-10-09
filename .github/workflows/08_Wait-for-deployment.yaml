@@ -22,4 +22,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Check is `${{ inputs.docker_tag }}` is deployd to `${{ inputs.environment }}`"
+      - run: echo "Check is '${{ inputs.docker_tag }}' is deployd to '${{ inputs.environment }}'"
