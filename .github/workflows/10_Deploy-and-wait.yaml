@@ -1,7 +1,7 @@
 name: Deploy and wait
 
 on:
-  # label: # uncomment push
+  label: # uncomment push
   # push:
     # branches:
       # - main
