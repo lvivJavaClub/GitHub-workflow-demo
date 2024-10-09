@@ -1,0 +1,24 @@
+name: Build java service
+
+on:
+  workflow_call:
+
+jobs:
+ 
+  compile:
+ 
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Compile java code"
+      - run: echo "Compile java code"
+
+  testing:
+ 
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Testing java code"
+      - run: echo "Testing java code"
+      - run: echo "Testing java code"
+      - run: echo "Testing java code"

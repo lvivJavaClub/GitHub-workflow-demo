@@ -1,0 +1,9 @@
+name: Demo workflow
+
+on:
+- push
+
+jobs:
+
+  Build_service:
+    uses: 02_Build-service.yaml
