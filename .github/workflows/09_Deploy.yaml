@@ -27,4 +27,4 @@ jobs:
         id: docker
         shell: bash
         run: |
-          run: echo "tag_name=latest" >> "$GITHUB_OUTPUT"
+          echo "tag_name=latest" >> "$GITHUB_OUTPUT"
