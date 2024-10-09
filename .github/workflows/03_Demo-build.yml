@@ -7,4 +7,4 @@ jobs:
 
   Build_service:
     name: Build service
-    uses: ./.github/workflows/2_Build-service.yaml
+    uses: ./.github/workflows/02_Build-service.yaml
