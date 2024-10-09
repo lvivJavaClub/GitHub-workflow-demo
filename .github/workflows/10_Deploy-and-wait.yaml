@@ -6,16 +6,13 @@ on:
     branches:
       - main
 
-env:
-  ENV_NAME: test
-
 jobs:
 
   deploy:
     name: Deploy
     uses: ./.github/workflows/09_Deploy.yaml
     with:
-      environment: ${{ env.ENV_NAME }}
+      environment: prod
 
   wait:
     name: Wait
@@ -23,5 +20,5 @@ jobs:
       - deploy
     uses: ./.github/workflows/08_Wait-for-deployment.yaml
     with:
-      environment: ${{ env.ENV_NAME }}
+      environment: prod
       docker_tag: ${{ needs.deploy.outputs.docker_tag }}
