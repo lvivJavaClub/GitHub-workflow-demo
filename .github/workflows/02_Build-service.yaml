@@ -12,7 +12,6 @@ jobs:
 
     steps:
       - run: echo "Compile java code"
-      - run: echo "Compile java code"
 
   testing:
  
@@ -22,7 +21,4 @@ jobs:
     - compile
 
     steps:
-      - run: echo "Testing java code"
-      - run: echo "Testing java code"
-      - run: echo "Testing java code"
       - run: echo "Testing java code"
