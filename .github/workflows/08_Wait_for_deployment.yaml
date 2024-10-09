@@ -11,14 +11,14 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        type: string
+        type: environment
       commit:
         type: string
 jobs:
  
   wait:
  
-    name: Wait for deployment
+    name: Wait for deployment to `${{ inputs.environment }}`
     runs-on: ubuntu-latest
 
     steps:
