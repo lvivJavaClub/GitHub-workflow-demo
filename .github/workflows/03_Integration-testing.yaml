@@ -1,0 +1,34 @@
+name: Build java service
+
+on:
+  workflow_call:
+
+jobs:
+ 
+  smoke:
+ 
+    name: Smoke tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Run smoke tests"
+
+  performens:
+ 
+    name: Run performens tests
+    runs-on: ubuntu-latest
+    needs:
+    - smoke
+
+    steps:
+      - run: echo "Run performens test"
+
+  migration:
+ 
+    name: Run migration tests
+    runs-on: ubuntu-latest
+    needs:
+    - smoke
+
+    steps:
+      - run: echo "Run migration test"

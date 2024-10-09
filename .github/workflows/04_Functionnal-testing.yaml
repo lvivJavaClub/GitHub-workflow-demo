@@ -1,0 +1,26 @@
+name: Build java service
+
+on:
+  workflow_call:
+
+jobs:
+ 
+  functionnal:
+ 
+    name: Functionnal tests
+    runs-on: ubuntu-latest
+
+    strategy:
+      max-parallel: 2
+      matrix:
+        case:
+        - case-a
+        - case-b
+        - case-c
+        - case-d
+        - case-e
+        - case-f
+        - case-z
+
+    steps:
+      - run: echo "Run functionnal tests case: ${{ matrix.case }}"

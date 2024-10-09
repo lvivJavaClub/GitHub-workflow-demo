@@ -7,6 +7,7 @@ jobs:
  
   compile:
  
+    name: Compile code
     runs-on: ubuntu-latest
 
     steps:
@@ -15,6 +16,7 @@ jobs:
 
   testing:
  
+    name: Run jUnit tests
     runs-on: ubuntu-latest
     needs:
     - compile
