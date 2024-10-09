@@ -6,4 +6,5 @@ on:
 jobs:
 
   Build_service:
-    uses: .github/workflows/2_Build-service.yaml
+    name: Build service
+    uses: ./.github/workflows/2_Build-service.yaml
