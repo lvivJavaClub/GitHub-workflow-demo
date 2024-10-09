@@ -1,0 +1,24 @@
+name: Deploy and wait
+
+on:
+  # label: # uncomment push
+  push:
+    branches:
+      - main
+
+jobs:
+
+  deploy:
+    name: Deploy
+    uses: ./.github/workflows/09_Deploy.yaml
+    with:
+      environment: test
+
+  wait:
+    name: Wait
+    needs:
+      - deploy
+    uses: ./.github/workflows/08_Wait-for-deployment.yaml
+    with:
+      environment: test
+      docker_tag: ${{ needs.deploy.outputs.docker_tag }}

@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+    output:
+      docker_tag:
+        description: "Docker tag"
+        value: ${{ jobs.deploy.outputs.tag }}
+
+jobs:
+ 
+  deploy:
+ 
+    name: Deploy to `${{ inputs.environment }}`
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    outputs:
+      tag: ${{ steps.docker.outputs.tag_name }}
+
+    steps:
+      - run: echo "Deploy to `${{ inputs.environment }}`"
+
+      - name: Create output
+        id: docker
+        run: |
+          run: echo "tag_name=latest" >> "$GITHUB_OUTPUT"
