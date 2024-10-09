@@ -23,4 +23,4 @@ jobs:
         - case-z
 
     steps:
-      - run: echo "Run functionnal tests case: ${{ matrix.case }}"
+      - run: echo "Run functionnal tests case ${{ matrix.case }}"
