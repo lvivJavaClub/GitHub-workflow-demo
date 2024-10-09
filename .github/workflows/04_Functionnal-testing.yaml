@@ -1,5 +1,4 @@
-name: Build java service
-
+name: Run functionnal tests
 on:
   workflow_call:
 

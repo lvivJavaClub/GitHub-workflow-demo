@@ -1,10 +1,10 @@
 name: Demo workflow
 
 on:
-  # label: # uncomment push
-  push:
-    branches:
-      - main
+  label: # uncomment push
+  # push:
+    # branches:
+      # - main
 
 jobs:
 

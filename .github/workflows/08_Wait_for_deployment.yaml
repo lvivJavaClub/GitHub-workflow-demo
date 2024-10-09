@@ -1,0 +1,25 @@
+name: Wait for deployment
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+      commit:
+        type: string
+
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: string
+      commit:
+        type: string
+jobs:
+ 
+  wait:
+ 
+    name: Wait for deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Check is `${{ inputs.commit }}` is deployd to `${{ inputs.environment }}`"
