@@ -1,0 +1,12 @@
+name: Demo workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  build_service:
+    name: Build service
+    uses: ./.github/workflows/02_Build-service.yaml

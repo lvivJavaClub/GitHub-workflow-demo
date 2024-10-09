@@ -1,18 +1,19 @@
 name: Demo workflow
 
 on:
-- push
+- label # uncomment push
+# - push
 
 jobs:
 
-  # build_service:
-    # name: Build service
-    # uses: ./.github/workflows/02_Build-service.yaml
+  build_service:
+    name: Build service
+    uses: ./.github/workflows/02_Build-service.yaml
 
-  testing:
-    name: Run integration tests
-    uses: ./.github/workflows/03_Integration-testing.yaml
+  # testing:
+    # name: Run integration tests
+    # uses: ./.github/workflows/03_Integration-testing.yaml
 
-  functionnal-testing:
-    name: Run functionnal tests
-    uses: ./.github/workflows/04_Functionnal-testing.yaml
+  # functionnal-testing:
+    # name: Run functionnal tests
+    # uses: ./.github/workflows/04_Functionnal-testing.yaml

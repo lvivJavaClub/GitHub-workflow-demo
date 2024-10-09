@@ -1,0 +1,19 @@
+name: Demo workflow
+
+on:
+  label: # uncomment push
+  # push:
+    # branches:
+      # - main
+
+jobs:
+
+  build_service:
+    name: Build service
+    uses: ./.github/workflows/02_Build-service.yaml
+
+  testing:
+    name: Run integration tests
+    needs:
+      - build_service
+    uses: ./.github/workflows/03_Integration-testing.yaml
