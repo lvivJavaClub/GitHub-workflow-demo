@@ -5,7 +5,7 @@ on:
     inputs:
       environment:
         type: string
-    output:
+    outputs:
       docker_tag:
         description: "Docker tag"
         value: ${{ jobs.deploy.outputs.tag }}
