@@ -25,5 +25,6 @@ jobs:
 
       - name: Create output
         id: docker
+        shell: bash
         run: |
           run: echo "tag_name=latest" >> "$GITHUB_OUTPUT"
