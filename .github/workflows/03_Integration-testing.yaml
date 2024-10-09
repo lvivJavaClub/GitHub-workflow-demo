@@ -32,3 +32,16 @@ jobs:
 
     steps:
       - run: echo "Run migration test"
+
+  regression:
+ 
+    name: Run regression tests
+    runs-on: ubuntu-latest
+    needs:
+    - smoke
+    - migration
+
+    steps:
+      - run: echo "Run regression test"
+
+  
