@@ -20,6 +20,7 @@ jobs:
  
     name: Wait for deployment to `${{ inputs.environment }}`
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
 
     steps:
       - run: echo "Check is `${{ inputs.commit }}` is deployd to `${{ inputs.environment }}`"
