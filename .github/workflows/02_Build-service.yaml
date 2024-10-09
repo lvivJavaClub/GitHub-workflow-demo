@@ -16,6 +16,8 @@ jobs:
   testing:
  
     runs-on: ubuntu-latest
+    needs:
+    - compile
 
     steps:
       - run: echo "Testing java code"
