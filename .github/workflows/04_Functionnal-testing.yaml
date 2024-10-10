@@ -20,7 +20,7 @@ jobs:
         - case-e
         - case-f
         - case-z
-      v:
+        v:
         - 1
         - 2
         - 3 
