@@ -3,8 +3,8 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
-- label # uncomment push .
-- push
+- label # uncomment push
+# - push
 
 jobs:
   Explore-GitHub-Actions:
