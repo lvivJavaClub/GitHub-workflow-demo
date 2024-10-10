@@ -20,6 +20,10 @@ jobs:
         - case-e
         - case-f
         - case-z
+      v:
+        - 1
+        - 2
+        - 3 
 
     steps:
-      - run: echo "Run functionnal tests case ${{ matrix.case }}"
+      - run: echo "Run functionnal tests case ${{ matrix.case }} x ${{ matrix.v }} "
