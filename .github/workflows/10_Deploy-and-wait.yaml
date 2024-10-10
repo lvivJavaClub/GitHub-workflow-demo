@@ -12,7 +12,7 @@ jobs:
     name: Deploy
     uses: ./.github/workflows/09_Deploy.yaml
     with:
-      environment: prod
+      environment: test
 
   wait:
     name: Wait
@@ -20,5 +20,5 @@ jobs:
       - deploy
     uses: ./.github/workflows/08_Wait-for-deployment.yaml
     with:
-      environment: prod
+      environment: test
       docker_tag: ${{ needs.deploy.outputs.docker_tag }}
