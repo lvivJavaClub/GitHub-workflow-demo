@@ -2,9 +2,9 @@ name: Deploy and wait
 
 on:
   label: # uncomment push
-  # push:
-    # branches:
-      # - main
+  push:
+    branches:
+      - main
 
 jobs:
 
